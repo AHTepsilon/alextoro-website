@@ -1,0 +1,261 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+$black: #000000;
+$white: #FFFFFF;
+$yellow: #FFD800;
+$pink: #ED1E5F;
+
+
+@mixin flexSet(){
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin sectionConfig(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 4em;
+    background-color: $yellow;
+}
+
+@mixin sectionTitle(){
+    color: $black;
+    font-size: 48px;
+    text-shadow: 2px 2px 3px $pink;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+
+    margin: 0.7em auto 0.1em auto;
+}
+
+body{
+    margin: 0;
+}
+
+.header{
+
+    padding: 0 60px;
+
+    background-color: $black;
+
+    @include flexSet();
+    align-items: center;
+    justify-content: space-between;
+
+    &-pages{
+
+        @include flexSet();
+
+        &-logo{
+
+        }
+
+        &-ul{
+
+            @include flexSet();
+            list-style: none;
+            align-items: center;
+            color: $white;
+
+            &-item{
+
+                margin: 1em;
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+
+                &-about{
+                    
+                }
+    
+                &-portfolio{
+    
+                }
+            }
+
+        }
+
+    }
+
+    &-socials{
+
+        @include flexSet();
+
+        &-ul{
+
+            @include flexSet();
+            list-style: none;
+            align-items: center;
+
+            &-item{
+                
+                  margin: 1em;
+
+                  transition: transform .2s;
+
+                  &:hover{
+                      cursor: pointer;
+                      transform:scale(1.3);
+                  }
+
+                &-linkedin{
+
+                }
+    
+                &-git{
+                    
+                }
+    
+                &-behance{
+                    
+                }
+    
+                &-instagram{
+                    
+                }
+            }
+
+        }
+    }
+}
+
+.main-section{
+    background-image: url("./img/sectionTypeBackground.png");
+    background-color: $black;
+
+    padding: 5.8em 3.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-info{
+
+        &-text{
+
+            &-name{
+                color: $white;
+                font-size: 48px;
+                text-shadow: 2px 2px 3px $pink;
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: bold;
+                margin-top: 0;
+    
+                width: 403px;
+            }
+    
+            &-h2{
+                color: $white;
+                font-size: 48px;
+                text-shadow: 2px 2px 3px $pink;
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: normal;
+                margin: 0 0;
+            }
+        }
+    }
+}
+
+.drip-section{
+
+    height: 310px;
+    width: 100%;
+
+    background-image: url("./img/drip.png"); 
+    background-repeat: no-repeat;
+}
+
+.drip-section{
+    width: auto;
+    background-size: inherit;
+    background-image: url("./img/drip.png");
+    background-color: $yellow;
+    z-index: -1;
+    margin-top: -15px;
+}
+
+.about-section{
+
+    @include sectionConfig();
+    
+    &-snail{
+
+    }
+
+    &-title{
+        @include sectionTitle();
+    }
+
+    &-text{
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 139.9%;
+
+        width: 40em;
+    }
+}
+
+.portfolio-section{
+    
+    @include sectionConfig();
+
+    &-title{
+        @include sectionTitle();
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 15px;
+        grid-auto-rows: minmax(100px, auto);
+
+      }
+
+    .portfolio-section-img{
+        width: 12em;
+        margin: 0;
+        transition: transform .2s;
+
+        &:hover{
+            cursor: pointer;
+            transform:scale(1.1);
+        }
+    }
+}
+
+.contact-section{
+    @include sectionConfig();
+    padding-bottom: 5em;
+
+    &-title{
+        @include sectionTitle();
+    }
+
+    &-info{
+        display: flex;
+        flex-direction: row;
+
+        &-text{
+            font-family: 'Raleway', sans-serif;
+            margin: 0.4em;
+        }
+
+        &-subtitle{
+            font-weight: bold;
+        }
+
+
+        &-subtext{
+            font-weight: normal;
+        }
+    }
+
+}
