@@ -1,6 +1,4 @@
 import './style.scss'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
 
 document.querySelector('#app').innerHTML = `
 <header class="header">
