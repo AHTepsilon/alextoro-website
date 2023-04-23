@@ -125,7 +125,7 @@ body{
 }
 
 .main-section{
-    background-image: url("./img/sectionTypeBackground.png");
+    background-image: url("/sectionTypeBackground.png");
     background-color: $black;
 
     padding: 5.8em 3.5em;
@@ -167,14 +167,14 @@ body{
     height: 310px;
     width: 100%;
 
-    background-image: url("./img/drip.png"); 
+    background-image: url("/drip.png"); 
     background-repeat: no-repeat;
 }
 
 .drip-section{
     width: auto;
     background-size: inherit;
-    background-image: url("./img/drip.png");
+    background-image: url("/drip.png");
     background-color: $yellow;
     z-index: -1;
     margin-top: -15px;

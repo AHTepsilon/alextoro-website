@@ -1,6 +1,4 @@
-import './style.scss'
-
-document.querySelector('#app').innerHTML = `
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&a(t)}).observe(document,{childList:!0,subtree:!0});function o(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function a(e){if(e.ep)return;e.ep=!0;const s=o(e);fetch(e.href,s)}})();document.querySelector("#app").innerHTML=`
 <header class="header">
   <div class="header-pages">
   <img src="/Logo.png" class="header-pages-logo">
@@ -56,4 +54,4 @@ document.querySelector('#app').innerHTML = `
     <p class="contact-section-info-text contact-section-info-subtext">alextorodesigns@gmail.com</>
   </div>
 </section>
-`
+`;
