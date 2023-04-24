@@ -125,7 +125,7 @@ body{
 }
 
 .main-section{
-    background-image: url("/sectionTypeBackground.png");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/alextorodesigns.appspot.com/o/sectionTypeBackground.png?alt=media&token=8bbef48f-3646-4ce8-964a-981fa460d2ba");
     background-color: $black;
 
     padding: 5.8em 3.5em;
@@ -167,17 +167,17 @@ body{
     height: 310px;
     width: 100%;
 
-    background-image: url("/drip.png"); 
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/alextorodesigns.appspot.com/o/drip.png?alt=media&token=6cefdf67-4b91-47e9-8115-b6293e841c94"); 
     background-repeat: no-repeat;
 }
 
 .drip-section{
     width: auto;
     background-size: inherit;
-    background-image: url("/drip.png");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/alextorodesigns.appspot.com/o/drip.png?alt=media&token=6cefdf67-4b91-47e9-8115-b6293e841c94");
     background-color: $yellow;
     z-index: -1;
-    margin-top: -15px;
+    margin-top: 0;
 }
 
 .about-section{
