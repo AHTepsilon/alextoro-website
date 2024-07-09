@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+$black: #000000;
+$white: #FFFFFF;
+$yellow: #FFD800;
+$pink: #ED1E5F;
+
+
+@mixin flexSet(){
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin sectionConfig(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 4em;
+    background-color: $yellow;
+}
+
+@mixin sectionTitle(){
+    color: $black;
+    font-size: 48px;
+    text-shadow: 2px 2px 3px $pink;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+
+    margin: 0.7em auto 0.1em auto;
+}
+
+body{
+    margin: 0;
+}
+
+@media all and  (max-width: 1673px){
+    .portfolio-section{
+    
+        @include sectionConfig();
+    
+        &-title{
+            @include sectionTitle();
+        }
+    
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            grid-gap: 15px;
+            grid-auto-rows: minmax(100px, auto);
+    
+          }
+    
+        .portfolio-section-img{
+            width: 12em;
+            margin: 0;
+            transition: transform .2s;
+    
+            &:hover{
+                cursor: pointer;
+                transform:scale(1.1);
+            }
+        }
+    }
+}
+
+@media all and  (max-width: 1127px){
+    .portfolio-section{
+    
+        @include sectionConfig();
+    
+        &-title{
+            @include sectionTitle();
+        }
+    
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, 2fr);
+            grid-gap: 15px;
+            grid-auto-rows: minmax(100px, auto);
+    
+          }
+    
+        .portfolio-section-img{
+            width: 12em;
+            margin: 0;
+            transition: transform .2s;
+    
+            &:hover{
+                cursor: pointer;
+                transform:scale(1.1);
+            }
+        }
+    }
+}
+
+@media all and (max-width: 959px){
+    .main-section{
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/alextorodesigns.appspot.com/o/sectionTypeBackground.png?alt=media&token=8bbef48f-3646-4ce8-964a-981fa460d2ba");
+        background-color: $black;
+    
+        padding: 5.8em 3.5em;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    
+        &-info{
+    
+            &-text{
+    
+                &-name{
+                    color: $white;
+                    font-size: 48px;
+                    text-shadow: 2px 2px 3px $pink;
+                    font-family: 'Space Grotesk', sans-serif;
+                    font-weight: bold;
+                    margin-top: 0;
+        
+                    width: 403px;
+                }
+        
+                &-h2{
+                    color: $white;
+                    font-size: 48px;
+                    text-shadow: 2px 2px 3px $pink;
+                    font-family: 'Space Grotesk', sans-serif;
+                    font-weight: normal;
+                    margin: 0 0;
+                }
+            }
+        }
+    }
+    
+    .about-section{
+
+        @include sectionConfig();
+        
+        &-snail{
+            
+        }
+    
+        &-title{
+            @include sectionTitle();
+        }
+    
+        &-text{
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 139.9%;
+    
+            width: 30em;
+        }
+    }
+}
+
+@media all and (max-width: 719px){
+    .about-section{
+
+        @include sectionConfig();
+        
+        &-snail{
+            
+        }
+    
+        &-title{
+            @include sectionTitle();
+        }
+    
+        &-text{
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 139.9%;
+    
+            width: 20em;
+        }
+    }
+
+    .portfolio-section{
+    
+        @include sectionConfig();
+    
+        &-title{
+            @include sectionTitle();
+        }
+    
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, 2fr);
+            grid-gap: 15px;
+            grid-auto-rows: minmax(100px, auto);
+    
+          }
+    
+        .portfolio-section-img{
+            width: 12em;
+            margin: 0;
+            transition: transform .2s;
+    
+            &:hover{
+                cursor: pointer;
+                transform:scale(1.1);
+            }
+        }
+    }
+}

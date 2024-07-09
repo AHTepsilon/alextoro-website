@@ -1,4 +1,5 @@
 import './style.scss'
+import './media-queries.scss'
 
 import {app, analytics, storage} from "./firebase";
 import {ref} from "firebase/storage";
