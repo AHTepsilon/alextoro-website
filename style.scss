@@ -29,6 +29,9 @@ $pink: #ED1E5F;
     text-shadow: 2px 2px 3px $pink;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
     margin: 0.7em auto 0.1em auto;
 }
