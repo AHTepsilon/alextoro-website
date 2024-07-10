@@ -212,6 +212,19 @@ body{
 
     &-title{
         @include sectionTitle();
+
+        &-secondary{
+            color: $black;
+            font-size: 32px;
+            text-shadow: 2px 2px 3px $pink;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        
+            
+        }
     }
 
     .wrapper {
@@ -219,6 +232,21 @@ body{
         grid-template-columns: repeat(3, 2fr);
         grid-gap: 15px;
         grid-auto-rows: minmax(100px, auto);
+
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            &-description{
+                text-align: center;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                width: 540px;
+            }
+        }
 
       }
 
@@ -245,6 +273,8 @@ body{
     &-info{
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
         &-text{
             font-family: 'Raleway', sans-serif;
@@ -258,6 +288,57 @@ body{
 
         &-subtext{
             font-weight: normal;
+        }
+
+        &-ul{
+
+            @include flexSet();
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            padding-inline-start: 0px;
+
+            &-item{
+
+                margin: 1em;
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+
+                @mixin imgs(){
+                    width: 2em;
+                    transition: transform .2s;
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }
+
+                &-linkedin-img{
+                    @include imgs();
+                }
+    
+                &-git-img{
+                    @include imgs();
+                }
+    
+                &-behance-img{
+                    @include imgs();
+                }
+    
+                &-instagram-img{
+                    @include imgs();
+                }
+
+                &-about{
+                    
+                }
+    
+                &-portfolio{
+    
+                }
+            }
+
         }
     }
 

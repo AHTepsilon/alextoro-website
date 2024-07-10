@@ -232,6 +232,10 @@ body{
             grid-gap: 15px;
             grid-auto-rows: minmax(100px, auto);
 
+            &-inner-description{
+                width: 20em;
+            }
+
             .instagram-media{
                 width: 15em !important;
             }
